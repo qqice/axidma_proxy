@@ -13,7 +13,10 @@ ifndef CROSS_COMPILE
     KERNEL_VERSION = $(shell uname -r)
     KBUILD_DIR ?= /lib/modules/$(KERNEL_VERSION)/build/
 endif
- 
+
+# Add include directory for dma-proxy.h
+EXTRA_CFLAGS += -I$(PWD)/../Common
+
 all:
 	make -C $(KBUILD_DIR) M=`pwd` modules
  
