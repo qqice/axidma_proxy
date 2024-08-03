@@ -15,11 +15,11 @@ all: $(TARGET)
 
 # Link the object files to create the executable
 $(TARGET): $(SRCS)
-    $(CC) $(CFLAGS) -o $(TARGET) $(SRCS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRCS)
 
 # Clean up build files
 clean:
-    rm -f $(TARGET) *.o
+	rm -f $(TARGET) *.o
 
 # Phony targets
 .PHONY: all clean
